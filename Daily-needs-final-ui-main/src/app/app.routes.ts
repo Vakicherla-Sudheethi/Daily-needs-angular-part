@@ -29,6 +29,7 @@ import { SupplierDashboardComponent } from './Pages/supplier-dashboard/supplier-
 import { GetAllSupplierProductsComponent } from './Pages/get-all-supplier-products/get-all-supplier-products.component';
 import { PaymentPageComponent } from './Pages/payment-page/payment-page.component';
 import { UploadImageComponent } from './Pages/upload-image/upload-image.component';
+import { PaymentSuccessfullComponent } from './payment-successfull/payment-successfull.component';
 
 export const routes: Routes = [
     // {path:'add-new-city',component:AddNewCityComponent},
@@ -67,7 +68,8 @@ export const routes: Routes = [
           // {path:''}
           {path:'add-new-cart',component:AddNewCartComponent},
           {path:'get-all-carts',component:GetAllCartsComponent},
-          {path:'payment-page',component:PaymentPageComponent}
+          {path:'payment-page',component:PaymentPageComponent},
+          {path:'payment-successfull',component:PaymentSuccessfullComponent}
         ],
       },
       {
