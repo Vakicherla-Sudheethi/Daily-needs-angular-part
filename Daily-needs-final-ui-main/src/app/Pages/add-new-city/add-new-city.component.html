@@ -1,0 +1,50 @@
+<!-- <p>add-new-city works!</p>
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>City ID</td>
+            <td>
+                <input type="text" [(ngModel)]="city.cityId">
+            </td>
+        </tr>
+        <tr>
+            <td>City Name</td>
+            <td>
+                <input type="text" [(ngModel)]="city.cityName">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addCity()">Add</button>
+            </td>
+        </tr>
+    </table>
+</div> -->
+<div class="container">
+    <div class="register-form" style="width: 50%;">
+        <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && addCity()">
+            <div class="form-group">
+                <label>City ID</label>
+                <input type="text" class="form-control" name="cityId" [(ngModel)]="city.cityId" required
+                    #cityId="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cityId.errors }" />
+                <div *ngIf="f.submitted && cityId.errors" class="invalid-feedback">
+                    <div *ngIf="cityId.errors['required']">City ID is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>City Name</label>
+                <input type="text" class="form-control" name="cityName" [(ngModel)]="city.cityName" required
+                    #cityName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && cityName.errors }" />
+                <div *ngIf="f.submitted && cityName.errors" class="invalid-feedback">
+                    <div *ngIf="cityName.errors['required']">City Name is required</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Add City</button>
+                <!-- <button type="button" (click)="onReset(f)" class="btn btn-warning float-right">
+                    Reset
+                </button> -->
+            </div>
+        </form>
+    </div>
+</div>

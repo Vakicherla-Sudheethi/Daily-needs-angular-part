@@ -1,0 +1,22 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let city of cities">
+                <td>{{ city.cityId }}</td>
+                <td>{{ city.cityName }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="delete(city.cityId)">Delete</button>
+                    <!-- <button (click)="getId(city.cityId)">Search</button> -->
+                    <!-- <button class="btn btn-primary" (click)="edit()">Edit</button>  -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

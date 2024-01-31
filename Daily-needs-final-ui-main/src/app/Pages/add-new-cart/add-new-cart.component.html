@@ -1,0 +1,35 @@
+<p>add-new-cart works!</p>
+<p>Add to Cart</p>
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>Cart ID</td>
+      <td>
+        <input type="text" [(ngModel)]="cartItem.cartID">
+      </td>
+    </tr>
+    <tr>
+      <td>User ID</td>
+      <td>
+        <input type="text" [(ngModel)]="cartItem.userID">
+      </td>
+    </tr>
+    <tr>
+      <td>Product ID</td>
+      <td>
+        <input type="text" [(ngModel)]="cartItem.productID">
+      </td>
+    </tr>
+    <tr>
+      <td>Quantity</td>
+      <td>
+        <input type="text" [(ngModel)]="cartItem.quantity">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="addToCart(cartItem.productID,cartItem.quantity)">Add to Cart</button>
+      </td>
+    </tr>
+  </table>
+</div>

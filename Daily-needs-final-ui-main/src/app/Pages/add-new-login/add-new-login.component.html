@@ -1,0 +1,35 @@
+
+<p>Login</p>
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>Login ID</td>
+      <td>
+        <input type="text" [(ngModel)]="login.loginId">
+      </td>
+    </tr>
+    <tr>
+      <td>Username</td>
+      <td>
+        <input type="text" [(ngModel)]="login.username">
+      </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+        <input type="password" [(ngModel)]="login.password">
+      </td>
+    </tr>
+    <tr>
+      <td>User ID</td>
+      <td>
+        <input type="text" [(ngModel)]="login.userID">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="addLogin()">Login</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,40 @@
+
+<div class="container">
+  <table class="table">
+    <tr>
+      <td>User ID</td>
+      <td>
+        <input type="text" [(ngModel)]="user.userID">
+      </td>
+    </tr>
+    <tr>
+      <td>User Name</td>
+      <td>
+        <input type="text" [(ngModel)]="user.username">
+      </td>
+    </tr>
+    <tr>
+      <td>Email</td>
+      <td>
+        <input type="text" [(ngModel)]="user.email">
+      </td>
+    </tr>
+    <tr>
+      <td>Password</td>
+      <td>
+        <input type="text" [(ngModel)]="user.password">
+      </td>
+    </tr>
+    <tr>
+      <td>Role ID</td>
+      <td>
+        <input type="text" [(ngModel)]="user.roleID">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button (click)="addUser()">Add</button>
+      </td>
+    </tr>
+  </table>
+</div>

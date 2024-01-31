@@ -1,0 +1,32 @@
+
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                <li class="nav-item"><a class="nav-link" [routerLink]="'customer-city-location'">Search Product</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-carts'">View Cart</a></li>
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-carts'">View-Cart</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'Payment-page'">Payment</a></li> -->
+
+
+
+                <!-- </li>  -->
+                <!-- <li class="nav-item"><a class="nav-link">Search</a></li>
+                <li class="nav-item"><a class="nav-link">Transactions</a></li>
+                <li class="nav-item"><a class="nav-link">Templates</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'login'">LogOut</a></li> -->
+                <li><button (click)='logOut()'>LogOut</button></li>
+                
+
+            </ul>
+        </div>
+        <!--/col-->
+
+        <div class="col main pt-5 mt-3">
+            <router-outlet></router-outlet>
+
+        </div>
+        <!--/main col-->
+    </div>
+
+</div>

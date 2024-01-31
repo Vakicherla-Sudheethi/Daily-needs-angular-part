@@ -1,0 +1,25 @@
+
+<div class="container">
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Login ID</th>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>User ID</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let login of logins">
+                <td>{{ login.loginId }}</td>
+                <td>{{ login.username }}</td>
+                <td>{{ login.password }}</td>
+                <td>{{ login.userID }}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="delete(login.loginId)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="register-form" style="width: 50%;">
+        <form name="registrationForm" #f="ngForm" (ngSubmit)="f.form.valid && onSubmit()">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" id="username" [(ngModel)]="username" required
+                    #usernameInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && usernameInput.errors }" />
+                <div *ngIf="f.submitted && usernameInput.errors" class="invalid-feedback">
+                    <div *ngIf="usernameInput.errors['required']">Username is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email" [(ngModel)]="email" required
+                    #emailInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && emailInput.errors }" />
+                <div *ngIf="f.submitted && emailInput.errors" class="invalid-feedback">
+                    <div *ngIf="emailInput.errors['required']">Email is required</div>
+                    <div *ngIf="emailInput.errors['email']">Invalid email format</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" id="password" [(ngModel)]="password" required
+                    minlength="6" maxlength="20" #passwordInput="ngModel"
+                    [ngClass]="{ 'is-invalid': f.submitted && passwordInput.errors }" />
+                <div *ngIf="f.submitted && passwordInput.errors" class="invalid-feedback">
+                    <div *ngIf="passwordInput.errors['required']">Password is required</div>
+                    <div *ngIf="passwordInput.errors['minlength']">Password must be at least 6 characters</div>
+                    <div *ngIf="passwordInput.errors['maxlength']">Password must not exceed 20 characters</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Role</label>
+                <select class="form-control" name="role" id="role" [(ngModel)]="selectedRole" required
+                    #roleInput="ngModel" [ngClass]="{ 'is-invalid': f.submitted && roleInput.errors }">
+                    <option *ngFor="let role of roleMap" [value]="role.value">{{ role.key }}</option>
+                </select>
+                <div *ngIf="f.submitted && roleInput.errors" class="invalid-feedback">
+                    <div *ngIf="roleInput.errors['required']">Role is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="button" (click)="onReset(f)" class="btn btn-warning float-right">Reset</button>
+            </div>
+
+            <div class="form-group">
+                <span>{{errMsg}}</span>
+            </div>
+        </form>
+    </div>
+</div>

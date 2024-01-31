@@ -1,0 +1,28 @@
+
+<div class="container">
+    <table class="table">
+        <tr>
+            <td>Location ID</td>
+            <td>
+                <input type="text" [(ngModel)]="location.locId" name="locID">
+            </td>
+        </tr>
+        <tr>
+            <td>Location Name</td>
+            <td>
+                <input type="text" [(ngModel)]="location.locName" name="locName">
+            </td>
+        </tr>
+        <tr>
+            <td>City ID</td>
+            <td>
+                <input type="text" [(ngModel)]="location.cityId" name="cityID">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addLocation()">Add</button>
+            </td>
+        </tr>
+    </table>
+</div>

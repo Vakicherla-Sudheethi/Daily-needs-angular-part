@@ -1,0 +1,22 @@
+
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>Offer ID</th>
+            <th>Product ID</th>
+            <th>Offer Percentage</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let offer of offers">
+            <td>{{ offer.offerId}}</td>
+            <td>{{ offer.productID }}</td>
+            <td>{{ offer.offerPercentage}}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(offer.offerId)">Delete</button>
+                <!-- <button (click)="getOfferId(offer.offerID)">Search</button> -->
+            </td> 
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,44 @@
+/* Navbar styles */
+.navbar {
+    background-color: #007bff;
+  }
+  
+  .navbar-toggler-icon {
+    color: #fff;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-link {
+    color: #fff;
+  }
+  
+  .nav-link:hover {
+    color: #f8f9fa;
+  }
+  
+  /* Offcanvas sidebar styles */
+  .offcanvas-sidebar {
+    background-color: #f8f9fa;
+    padding: 15px;
+  }
+  
+  /* Main content styles */
+  .main {
+    padding-top: 50px; /* Adjust based on your navbar height */
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1px 0;    text-align: right;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  

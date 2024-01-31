@@ -1,0 +1,31 @@
+<div class="container">
+    <table class="table table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>UserID</th>
+          <th>UserName</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>RoleID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users">
+          <td>{{user.userID }}</td>
+          <td>{{user.username }}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.password}}</td>
+          <td>{{user.roleID}}</td>
+
+
+          <td>
+            <button class="btn btn-danger" (click)="delete(user.userID)">Delete</button>
+            <!-- <button class="btn btn-primary" (click)="search(user.userID)">Search</button> -->
+            <button class="btn btn-info" (click)="getId(user.userID)">Edit</button> &nbsp;
+            <button class="btn btn-secondary" (click)="getId(user.userID)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

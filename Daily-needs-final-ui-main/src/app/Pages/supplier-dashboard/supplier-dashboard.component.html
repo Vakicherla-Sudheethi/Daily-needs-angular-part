@@ -1,0 +1,39 @@
+
+<div class="container-fluid" id="main">
+    <div class="row row-offcanvas row-offcanvas-left">
+        <div class="col-md-3 col-lg-2 sidebar-offcanvas bg-light pl-0" id="sidebar" role="navigation">
+            <ul class="nav flex-column sticky-top pl-0 pt-5 mt-3">
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'add-new-city'">Add City</a></li>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-cities'">Get All City</a>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'add-new-location'">Add new Location</a> -->
+                <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-locations'">Get all locations </a>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'add-new-product'">Add Product </a>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-supplier-products'">View Product </a>
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'product-by-id'">Edit Product </a> -->
+                <li class="nav-item"><a class="nav-link" [routerLink]="'add-new-offer'">Add offers </a>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-offers'">View Offers </a>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'add-new-category'">Add Categories </a>
+                <li class="nav-item"><a class="nav-link" [routerLink]="'get-all-categories'">View Categories </a>
+
+
+
+                </li>
+                <!-- <li class="nav-item"><a class="nav-link">Search</a></li>
+                <li class="nav-item"><a class="nav-link">Transactions</a></li>
+                <li class="nav-item"><a class="nav-link">Templates</a></li> -->
+                <!-- <li class="nav-item"><a class="nav-link" [routerLink]="'login'">LogOut</a></li> -->
+                <li><button (click)='logOut()'>LogOut</button></li>
+
+
+            </ul>
+        </div>
+        <!--/col-->
+
+        <div class="col main pt-5 mt-3">
+            <router-outlet></router-outlet>
+
+        </div>
+        <!--/main col-->
+    </div>
+
+</div>

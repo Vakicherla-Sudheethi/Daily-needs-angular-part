@@ -1,0 +1,33 @@
+
+<div class="container">
+    <table class="table table-bordered table-responsive">
+      <thead>
+        <tr>
+          <th>Product ID</th>
+          <th>Product Name</th>
+          <th>Category ID</th>
+          <th>User ID</th>
+          <th>Price</th>
+          <th>Availability</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.productID }}</td>
+          <td>{{ product.productName }}</td>
+          <td>{{ product.categoryID}}</td>
+          <td>{{ product.userID }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.availability }}</td>
+
+          <td>
+            <button class="btn btn-danger" (click)="delete(product.productID)">Delete</button>
+            <button class="btn btn-info" (click)="getId(product.productID)">Edit</button>
+
+            <button class="btn btn-secondary" (click)="getId(product.productID)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

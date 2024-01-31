@@ -1,0 +1,28 @@
+
+<div class="container">
+    <table class="table">
+        <!-- <tr>
+            <td>Offer ID</td>
+            <td>
+                <input type="number" [(ngModel)]="offer.offerId">
+            </td>
+        </tr> -->
+        <tr>
+            <td>Product ID</td>
+            <td>
+                <input type="number" [(ngModel)]="offer.productID">
+            </td>
+        </tr>
+        <tr>
+            <td>Offer Percentage</td>
+            <td>
+                <input type="number" step="0.01" [(ngModel)]="offer.offerPercentage">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="addOffer()">Add</button>
+            </td>
+        </tr>
+    </table>
+</div>

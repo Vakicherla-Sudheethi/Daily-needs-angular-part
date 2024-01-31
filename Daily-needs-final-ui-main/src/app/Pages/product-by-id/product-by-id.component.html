@@ -1,0 +1,78 @@
+
+<div class="container">
+    <table class="table">
+        <!-- <tr>
+            <td>
+                <label>Product ID</label>
+            </td>
+            <td>
+                <input type="number" [(ngModel)]="productId" readonly class="form-control">
+            </td>
+            <td>
+                 <button class="btn btn-primary" (click)="search1()">Search</button> -->
+            <!-- </td>
+        </tr>  -->
+        <tr>
+            <td colspan="3">
+                <span style="color: red;">{{ errMsg }}</span>
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isProductExist">
+        <tr>
+            <td>Product ID</td>
+            <td>
+                <input type="number" [(ngModel)]="product.productID" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Product Name</td>
+            <td>
+                <input type="text" [(ngModel)]="product.productName" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Category ID</td>
+            <td>
+                <input type="number" [(ngModel)]="product.categoryID" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>User ID</td>
+            <td>
+                <input type="number" [(ngModel)]="product.userID" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>
+                <input type="number" [(ngModel)]="product.price" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>Availability</td>
+            <td>
+                <input type="text" [(ngModel)]="product.availability" class="form-control">
+            </td>
+        </tr>
+        <tr>
+            <td>City ID</td>
+            <td>
+                <input type="text" [(ngModel)]="product.cityId" class="form-control">
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Location ID</td>
+            <td>
+                <input type="text" [(ngModel)]="product.locId" class="form-control">
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="edit(product.productID)">Edit</button> &nbsp;
+        </tr>
+    </table>
+</div>

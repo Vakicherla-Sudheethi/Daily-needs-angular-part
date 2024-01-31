@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Sidebar */
+#sidebar {
+    background-color: #f8f9fa;
+    height: 100vh;
+  }
+  
+  /* Sidebar Links */
+  .nav-link {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Button */
+  button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Main Content */
+  .main {
+    padding-top: 70px; /* Adjust based on your header height */
+  }
+  

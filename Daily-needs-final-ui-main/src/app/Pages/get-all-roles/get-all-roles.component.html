@@ -1,0 +1,19 @@
+<table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th>Role ID</th>
+            <th>Role Name</th>
+            <th>Actions</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let role of roles">
+            <td>{{ role.roleId }}</td>
+            <td>{{ role.roleName }}</td>
+            <td>
+                <button class="btn btn-danger" (click)="delete(role.roleId)">Delete</button>
+                <button (click)="getId(role.roleId)">Search</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
