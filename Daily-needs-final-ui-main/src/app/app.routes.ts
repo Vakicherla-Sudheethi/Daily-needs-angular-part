@@ -30,6 +30,7 @@ import { GetAllSupplierProductsComponent } from './Pages/get-all-supplier-produc
 import { PaymentPageComponent } from './Pages/payment-page/payment-page.component';
 import { UploadImageComponent } from './Pages/upload-image/upload-image.component';
 import { PaymentSuccessfullComponent } from './payment-successfull/payment-successfull.component';
+import { IntroComponent } from './Pages/intro/intro.component';
 
 export const routes: Routes = [
     // {path:'add-new-city',component:AddNewCityComponent},
@@ -114,5 +115,6 @@ export const routes: Routes = [
       { path: '', component: LoginComponent },
       {path:'user',component:UserComponent},
       {path:'login', component: LoginComponent },
+      {path:'intro',component:IntroComponent}
       // {path:'upload-image',component:UploadImageComponent}
 ]

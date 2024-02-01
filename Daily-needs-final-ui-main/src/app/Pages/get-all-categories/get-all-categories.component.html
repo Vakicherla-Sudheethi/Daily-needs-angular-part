@@ -1,22 +1,12 @@
 <div class="container">
-    <table class="table table-bordered table-responsive">
-        <thead>
-            <tr>
-                <th>Category ID</th>
-                <th>Category Name</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let category of categories">
-                <td>{{ category.categoryID }}</td>
-                <td>{{ category.categoryName }}</td>
-                <td>
-                    <button class="btn btn-danger" (click)="delete(category.categoryID)">Delete</button>
-                    <!-- <button class="btn btn-info" (click)="editCategory(category.categoryID)">Edit</button>
-                    <button class="btn btn-secondary" (click)="viewCategory(category.categoryID)">View</button> -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="tile-container">
+      <div class="tile" *ngFor="let category of categories">
+        <div class="tile-content">
+          <p><strong>Category ID:</strong> {{ category.categoryID }}</p>
+          <p><strong>Category Name:</strong> {{ category.categoryName }}</p>
+          <button class="btn btn-danger" (click)="delete(category.categoryID)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
