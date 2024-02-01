@@ -1,68 +1,55 @@
-/* styles.css */
+/* Add more global styles as needed */
 
-/* Label for Select City */
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-  }
-  
-  /* Select City */
-  select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  
-  /* Container */
-  .container {
-    margin-top: 20px;
-  }
-  
-  /* Table */
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  /* Table Header */
-  .table th {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px;
-    font-weight: bold;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  
-  /* Table Body */
-  .table td {
-    padding: 10px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  
-  /* Alternate row color for better readability */
-  .table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  /* Table Actions Button */
-  .btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-danger:hover {
-    background-color: #c82333;
-  }
-  
+.tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute tiles evenly */
+  margin-top: 20px; /* Add spacing between dropdown and tiles */
+}
+
+.tile {
+  border: 1px solid #ddd;
+  margin: 10px;
+  padding: 20px;
+  width: calc(30% - 20px); /* Set width for 3 tiles per row with some spacing */
+  box-sizing: border-box;
+  transition: transform 0.3s ease; /* Add smooth transition effect */
+  background-color: #f8f9fa; /* Light background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for depth */
+}
+
+.tile:hover {
+  transform: scale(1.05); /* Add slight zoom on hover effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Adjusted box shadow on hover */
+}
+
+.tile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  height: 100%; /* Ensure content takes full height of tile */
+  text-align: center;
+}
+
+.tile-content p {
+  margin-bottom: 10px; /* Add spacing between paragraphs */
+}
+
+.btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #007bff; /* Blue button color */
+  color: #fff;
+  border: 1px solid #007bff;
+  transition: background-color 0.3s ease; /* Add smooth transition for button hover */
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker Blue on hover */
+  border: 1px solid #0056b3;
+}
+
+/* Add more styles as needed */

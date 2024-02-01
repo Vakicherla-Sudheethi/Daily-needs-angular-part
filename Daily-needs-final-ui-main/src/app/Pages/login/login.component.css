@@ -1,71 +1,96 @@
-/* General Styles */
 .container {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   height: 100vh;
 }
 
-.register-form {
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url('C:/Users/2000112376/Downloads/pic1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.register-form:hover {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); /* Adjusted box shadow on hover */
 }
 
-/* Form Styles */
+/* Rest of the styles remain unchanged */
+
+
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}.register-form {
+  background-image: url('C:/Users/2000112376/Downloads/pic1.jpg');
+  background-size: cover; /* Stretch the background image to cover the entire container */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  transition: box-shadow 0.3s;
+  
+}
+
+label {
+  font-weight: bold;
 }
 
 .form-control {
   width: 100%;
   padding: 8px;
-  font-size: 16px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-.invalid-feedback {
-  color: #dc3545;
-  font-size: 14px;
   margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-/* Button Styles */
 .btn {
   padding: 10px 20px;
-  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 .btn-primary {
-  background-color: #007bff;
+  background-color: rgb(100,149,237); /* Blue */
   color: #fff;
-  border: none;
+  border: 1px solid #3498db;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: rgb(65,105,225); /* Darker Blue on hover */
+  border: 1px solid #0d0b8a;
 }
 
 .btn-warning {
-  background-color: #ffc107;
-  color: #212529;
-  border: none;
+  background-color: #e74c3c; /* Red */
+  color: #fff;
+  border: 1px solid #e74c3c;
 }
 
 .btn-warning:hover {
-  background-color: #d39e00;
+  background-color:rgb(255,218,185); /* Darker Red on hover */
+  border: 1px solid #c0392b;
 }
 
-/* Alignment Styles */
 .float-right {
   float: right;
 }
 
 .float-center {
-  display: block;
   margin: 0 auto;
+  display: block;
 }
+
+.invalid-feedback {
+  color:rgb(240,128,128);
+  font-size: 80%;
+}
+
+/* Add more styles as needed */

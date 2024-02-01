@@ -1,33 +1,14 @@
-
 <label for="citySelect">Select City:</label>
 <div>
-    <!-- <input type="number" id="citySelect" class="form-control" [(ngModel)]="cityID"> -->
     <select  [(ngModel)]="cityId" (change)="getLocationsByCityId()">
-
         <option *ngFor="let item of cities" [value]="item.cityId">{{item.cityName}}</option>
     </select>
-  </div>
-<div class="container">
-    <table class="table table-bordered table-responsive">
-        <thead>
-            <tr>
-                <!-- <th>Location ID</th> -->
-                <th>Location Name</th>
-                <!-- <th>City ID</th> -->
-                <!-- <th>Action</th> -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let location of locations">
-                <!-- <td>{{ location.locId }}</td> -->
-                <td>{{ location.locName }}</td>
-                <!-- <td>{{ location.cityId }}</td> -->
-                <!-- <td>
-                     <button class="btn btn-danger" (click)="delete(location.locId)">Delete</button> 
-                 </td> -->
-            </tr>
-        </tbody>
-    </table>
-</div> 
+</div>
 
-  
+<div class="tile-container">
+    <div class="tile" *ngFor="let location of locations">
+        <div class="tile-content">
+            <p><strong>Location Name:</strong> {{ location.locName }}</p>
+        </div>
+    </div>
+</div>

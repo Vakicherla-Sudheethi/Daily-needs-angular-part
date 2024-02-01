@@ -1,45 +1,17 @@
-<!-- <p>get-all-supplier-products works!</p>
-<div *ngIf="products.length > 0">
-    <h2>Products for the User</h2>
-    <ul>
-      <li *ngFor="let product of products">
-        {{ product.productName }}
-      </li>
-    </ul>
+<div *ngIf="products.length > 0; else noProducts">
+  <div class="tile-container">
+    <div class="tile" *ngFor="let product of products">
+      <img src="http://localhost:5007/Resources/Images/{{product.uploadImg}}" alt="" width="100" height="100">
+      <div class="tile-content">
+        <p><strong>Product ID:</strong> {{ product.productID }}</p>
+        <p><strong>Product Name:</strong> {{ product.productName }}</p>
+        <p><strong>Price:</strong> {{ product.price }}</p>
+        <button class="btn btn-danger" (click)="delete(product.productID)">Delete</button>
+        <button class="btn btn-primary" (click)="edit(product.productID)">Edit</button>
+      </div>
+    </div>
   </div>
-  <div *ngIf="products.length === 0">
-    <p>No products found for the user.</p>
-  </div>
-   -->
-   <table>
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th>Price</th>
-        <th colspan="2">Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <ng-container *ngIf="products.length > 0; else noProducts">
-        <tr *ngFor="let product of products">
-          <td>
-            <img src="http://localhost:5007/Resources/Images/{{product.uploadImg}}" alt="" width="100" height="100">
-          </td>
-          <td>{{ product.productID }}</td>
-          <td>{{ product.productName }}</td>
-          <td>{{ product.price }}</td>
-          <td><button class="btn btn-danger" (click)="delete(product.productID)">Delete</button></td>
-          <td><button class="btn btn-primary" (click)="edit(product.productID)">Edit</button> &nbsp;</td>
-        </tr>
-      </ng-container>
-      <ng-template #noProducts>
-        <tr>
-          <td colspan="3">No products found for the user.</td>
-
-        </tr>
-      </ng-template>
-    </tbody>
-  </table>
-  
+</div>
+<ng-template #noProducts>
+  <p>No products found for the user.</p>
+</ng-template>
