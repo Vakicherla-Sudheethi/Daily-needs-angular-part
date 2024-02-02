@@ -1,31 +1,11 @@
-
-<table class="table table-bordered table-responsive">
-    <thead>
-        <tr>
-            <!-- <th>Offer ID</th> -->
-            <th>Product Image</th>
-            <th>Product Name</th>
-            <th>Offer Percentage</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-
-
-            <tr *ngFor="let item of productOffers">
-                <td>
-                  <img src="http://localhost:5007/Resources/Images/{{item.uploadImg}}" alt="" width="100" height="100">
-                </td>
-                  <td>{{item.productName}}</td>
-                  <td>{{item.offerPercentage}}</td>
-            </tr> 
-           
-            <tr *ngFor="let offer of offers">
-            <td>
-                <button class="btn btn-danger" (click)="delete(offer.offerId)">Delete</button>
-                <!-- <button (click)="getOfferId(offer.offerID)">Search</button> -->
-             </td>
-             </tr>
-        
-    </tbody>
-</table>
+<div class="tile-container">
+    <div class="tile" *ngFor="let item of productOffers">
+      <img src="http://localhost:5007/Resources/Images/{{item.uploadImg}}" alt="" class="tile-image">
+      <div class="tile-content">
+        <p class="tile-title">{{item.productName}}</p>
+        <p class="tile-offer">{{item.offerPercentage}} % Offer</p>
+      </div>
+      <button class="btn btn-danger" (click)="delete(item.offerId)">Delete</button>
+    </div>
+  </div>
+  

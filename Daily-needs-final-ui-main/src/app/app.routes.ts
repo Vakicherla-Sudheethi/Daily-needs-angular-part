@@ -115,6 +115,7 @@ export const routes: Routes = [
       { path: '', component: LoginComponent },
       {path:'user',component:UserComponent},
       {path:'login', component: LoginComponent },
-      {path:'intro',component:IntroComponent}
+      {path:'intro',component:IntroComponent},
       // {path:'upload-image',component:UploadImageComponent}
+      {path:'userid',component:UserByIdComponent}
 ]

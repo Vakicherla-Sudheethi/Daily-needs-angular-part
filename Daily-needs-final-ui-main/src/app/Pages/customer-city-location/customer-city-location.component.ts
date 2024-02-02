@@ -54,7 +54,17 @@ export class CustomerCityLocationComponent {
     this.qty = e.target.value;
     console.log(this.qty);
   }
-
+  increaseQty(e:any) {
+    this.qty=e.target.value;
+    this.qty ++;
+  }
+  
+  decreaseQty() {
+    if (this.qty > 1) {
+      this.qty--;
+    }
+  }
+  
   getAllLocations() {
     this.http
       .get<Location[]>('http://localhost:5007/api/Location/GetAllLocations',this.httpOptions)

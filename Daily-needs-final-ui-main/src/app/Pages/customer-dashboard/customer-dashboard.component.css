@@ -1,0 +1,21 @@
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color:rgb(205,92,92);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color:rgb(220,20,60);
+  }
+  .nav-link {
+    color: rgb(178, 34, 34);
+  }
+  .main {
+    background-color: #fff;
+  }
+  

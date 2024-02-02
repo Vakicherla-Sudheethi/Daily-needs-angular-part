@@ -1,37 +1,62 @@
-.form-control {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    width: 200px;
-  }
+/* Apply general styling to the page */
+body {
+  font-family: 'Arial', sans-serif;
+}
 
-  /* Style for tables */
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+.container-fluid {
+  padding: 20px;
+}
 
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
+/* Style for the form elements */
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
 
-  th {
-    background-color: #f2f2f2;
-  }
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
 
-  /* Style for buttons */
-  .btn {
-    padding: 8px 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: #fff;
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
 
-  .btn:hover {
-    background-color: #0056b3;
-  }
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for the quantity select box inside the table */
+td select {
+  width: 60px;
+}
+
+/* Style for the "Add to Cart" button with plum color */
+button {
+  padding: 8px;
+  background-color:#951c34; /* Plum color */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #951c34; /* Darker plum color on hover */
+}
+
+/* Add some spacing to the page */
+div {
+  margin-bottom: 15px;
+}

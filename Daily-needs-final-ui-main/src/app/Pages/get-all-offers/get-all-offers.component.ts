@@ -26,23 +26,17 @@ httpOptions = {
 constructor(private http: HttpClient, private router: Router) {
   //this.getAllOffers(this.lid);
   //this.getAllOffers(this.id);
-    this.http
-      .get<Location[]>('http://localhost:5007/api/Location/GetAllLocations',this.httpOptions)
-      .subscribe((response) => {
-        this.locations = response;
-        console.log(this.locations);
-      });
-
+  this.getAllOffers();
 }
 
-getAllOffers(lid:number)
+getAllOffers()
 {
-  console.log(this.lid)
+  //console.log()
   const url = `http://localhost:5007/api/Offer/GetAllProductOffers/${this.lid}`;
   this.http.get(url, this.httpOptions).subscribe(
     (response) => {
       console.log(response)
-      lid=this.locations
+      //lid=this.locations
       this.productOffers = response;
       console.log('Products:', this.productOffers); 
       //this.productOffers.uploadImg=localStorage.getItem('uploadImg');
