@@ -14,6 +14,9 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class GetAllOffersComponent {
 offers:Offer[]=[];
+lid:number=1 ;
+locations: Location[] = [];
+productOffers:any;
 httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
@@ -21,17 +24,33 @@ httpOptions = {
   }),
 };
 constructor(private http: HttpClient, private router: Router) {
-  this.getAllOffers();
+  //this.getAllOffers(this.lid);
+  //this.getAllOffers(this.id);
+    this.http
+      .get<Location[]>('http://localhost:5007/api/Location/GetAllLocations',this.httpOptions)
+      .subscribe((response) => {
+        this.locations = response;
+        console.log(this.locations);
+      });
+
 }
 
-getAllOffers()
+getAllOffers(lid:number)
 {
-  this.http
-  .get<Offer[]>('http://localhost:5007/api/Offer/GetAllOffers',this.httpOptions)
-  .subscribe((response) => {
-    this.offers = response;
-    console.log(this.offers);
-  });
+  console.log(this.lid)
+  const url = `http://localhost:5007/api/Offer/GetAllProductOffers/${this.lid}`;
+  this.http.get(url, this.httpOptions).subscribe(
+    (response) => {
+      console.log(response)
+      lid=this.locations
+      this.productOffers = response;
+      console.log('Products:', this.productOffers); 
+      //this.productOffers.uploadImg=localStorage.getItem('uploadImg');
+    },
+    (error) => {
+      console.error('Error fetching products by location:', error);
+    }
+  );
 }
 
 delete(id:any)
@@ -42,7 +61,8 @@ delete(id:any)
   {
     console.log(response);
   });
-  this.getAllOffers();
+  //this.getAllOffers();
+  //this.getAllOffers(this.id);
   location.reload()
 }
 }

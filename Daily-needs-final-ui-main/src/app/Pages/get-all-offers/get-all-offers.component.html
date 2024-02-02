@@ -3,20 +3,29 @@
     <thead>
         <tr>
             <!-- <th>Offer ID</th> -->
-            <th>Product ID</th>
+            <th>Product Image</th>
+            <th>Product Name</th>
             <th>Offer Percentage</th>
             <th>Actions</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let offer of offers">
-            <!-- <td>{{ offer.offerId}}</td> -->
-            <td>{{ offer.productID }}</td>
-            <td>{{ offer.offerPercentage}}</td>
+
+
+            <tr *ngFor="let item of productOffers">
+                <td>
+                  <img src="http://localhost:5007/Resources/Images/{{item.uploadImg}}" alt="" width="100" height="100">
+                </td>
+                  <td>{{item.productName}}</td>
+                  <td>{{item.offerPercentage}}</td>
+            </tr> 
+           
+            <tr *ngFor="let offer of offers">
             <td>
                 <button class="btn btn-danger" (click)="delete(offer.offerId)">Delete</button>
                 <!-- <button (click)="getOfferId(offer.offerID)">Search</button> -->
-            </td> 
-        </tr>
+             </td>
+             </tr>
+        
     </tbody>
 </table>
