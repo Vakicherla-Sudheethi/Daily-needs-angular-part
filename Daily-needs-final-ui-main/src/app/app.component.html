@@ -27,18 +27,27 @@
         </ul>
     </div>
 </nav>
+<style>
+    .main {
+        padding-top: 5rem; /* Adjust as needed */
+        padding-right: 10px; /* Adjust this value to reduce right-side padding */
+        padding-bottom: 1rem; /* Adjust as needed */
+        padding-left: 15px; /* Adjust as needed */
+    }
+</style>
+
 
 <div class="container-fluid">
     <!-- Your content goes here -->
-    <div class="row">
-        <div class="col-md-3 offcanvas-sidebar order-last" id="sidebar">
+    <!-- <div class="row"> -->
+        <!-- <div class="col-md-1 offcanvas-sidebar order-last" id="sidebar"> -->
             <!-- Offcanvas sidebar content -->
-        </div>
-        <div class="col-md-9 main pt-5 mt-3">
+        <!-- </div> -->
+        <!-- <div class="col-md-9 main pt-5 mt-3"> -->
             <router-outlet></router-outlet>
             <!-- Router outlet for Angular content -->
-        </div>
-    </div>
+        <!-- </div> -->
+    <!-- </div> -->
 </div>
 
 <footer class="container-fluid">
