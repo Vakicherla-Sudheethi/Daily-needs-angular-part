@@ -1,62 +1,144 @@
-/* Apply general styling to the page */
-body {
-  font-family: 'Arial', sans-serif;
+.product-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
-.container-fluid {
-  padding: 20px;
+.product-tile {
+  border: 1px solid #ffb6c1; /* Peach border color */
+  background-color: #ffe4e1; /* Peach background color */
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
 }
 
-/* Style for the form elements */
+.product-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.product-details {
+  text-align: center;
+}
+
+.product-name {
+  font-weight: bold;
+  color: #ff6347; /* Tomato color for product name */
+}
+
+.quantity-select {
+  margin: 10px 0;
+}
+
+.offer-percentage {
+  color: #ff4500; /* Orange-Red color for offer percentage */
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  background-color: pink; /* Pink color for the button */
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Apply general styles to labels and select boxes */
 label {
   display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333; /* Text color */
 }
 
 select {
   width: 100%;
   padding: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+/* Apply specific styles to the first select box (citySelect) */
+#citySelect {
+  background-color: #f9f9f9; /* Light gray background color */
+  font-weight: bold;
 }
 
-th, td {
+/* Apply specific styles to the second select box */
+#locationSelect {
+  background-color: #f5f5f5; /* Slightly lighter gray background color */
+}
+
+/* Add a subtle box shadow to product tiles */
+.product-tile {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-tile:hover {
+  transform: scale(1.05);
+}
+
+/* Add a border-radius to product images for a rounded look */
+.product-image {
+  border-radius: 8px;
+}
+
+/* Add a subtle hover effect to the add-to-cart button */
+.add-to-cart-btn:hover {
+  background-color: #ff69b4; /* Hot Pink on hover */
+}
+
+/* Add a border radius to the offer percentage for a pill-like appearance */
+.offer-percentage {
+  border-radius: 12px;
+  padding: 5px 10px;
+}
+
+/* Style the quantity select input for better visibility */
+.quantity-select {
+  appearance: none;
+  padding: 10px;
   border: 1px solid #ddd;
-  padding: 8px;
-  text-align: left;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Style for the quantity select box inside the table */
-td select {
-  width: 60px;
-}
-
-/* Style for the "Add to Cart" button with plum color */
-button {
-  padding: 8px;
-  background-color:#951c34; /* Plum color */
-  color: #fff;
-  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #951c34; /* Darker plum color on hover */
+/* Add a background color to labels for better separation */
+label {
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 4px;
 }
 
-/* Add some spacing to the page */
-div {
-  margin-bottom: 15px;
+/* Style the select boxes with a subtle gradient background */
+select {
+  background: linear-gradient(to bottom, #fff, #f9f9f9);
+}
+
+/* Add a slight shadow to the select boxes */
+select:focus {
+  box-shadow: 0 0 5px rgba(255, 105, 180, 0.5);
+}
+
+/* Add a transition effect to the select boxes */
+select {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Add a border radius to the product details for a softer look */
+.product-details {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #fff;
+}
+
+/* Add a border-radius to the add-to-cart button */
+.add-to-cart-btn {
+  border-radius: 20px;
 }

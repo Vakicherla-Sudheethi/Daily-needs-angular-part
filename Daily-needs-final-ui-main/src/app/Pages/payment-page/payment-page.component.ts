@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class PaymentPageComponent {
   
   constructor(private router: Router) {}
-  Success()
+  newSuccess()
   {
     this.router.navigateByUrl('customer-dashboard/payment-successfull');
   }

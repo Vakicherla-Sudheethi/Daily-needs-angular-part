@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Secure Payment</title>
@@ -42,9 +43,16 @@
       }
 
       // If all validations pass, the form is submitted
-      //window.location.href = "customer-dashboard/payment-successfull.html";
+      window.location.href = "customer-dashboard/payment-successfull";
       return true;
     }
+
+    function Success() {
+  alert("Payment Successful!");
+  window.location.href = "customer-dashboard/payment-successfull";
+  return true;
+}
+
   </script>
 </head>
 <body>
@@ -64,7 +72,7 @@
     <label for="cvv">CVV:</label>
     <input type="number" id="cvv" name="cvv" placeholder="CVV" required>
 
-    <button class="btn btn-secondary" (click)="Success()">Pay Now</button>
+    <button type="submit" class="btn btn-secondary" onclick=newSucccess() onclick="window.location.href='customer-dashboard/payment-successfull';">Pay Now</button>
   </form>
 
 </body>
