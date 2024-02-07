@@ -1,22 +1,20 @@
 <div class="container">
-    <table class="table table-bordered table-responsive">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let city of cities">
-                <td>{{ city.cityId }}</td>
-                <td>{{ city.cityName }}</td>
-                <td>
-                    <button class="btn btn-danger" (click)="delete(city.cityId)">Delete</button>
-                    <!-- <button (click)="getId(city.cityId)">Search</button> -->
-                    <!-- <button class="btn btn-primary" (click)="edit()">Edit</button>  -->
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="tile-container">
+      <div class="tile" *ngFor="let city of cities">
+        <div class="tile-header">
+            <h2>{{ city.cityName }}</h2>
+          <!-- <h3>City ID: {{ city.cityId }}</h3> -->
+        </div>
+        <div class="tile-body">
+          <!-- <p>Name: {{ city.cityName }}</p> -->
+          <p>City ID: {{ city.cityId }}</p>
+        </div>
+        <div class="tile-footer">
+          <button class="btn btn-danger" (click)="delete(city.cityId)">Delete</button>
+          <!-- <button (click)="getId(city.cityId)">Search</button> -->
+          <!-- <button class="btn btn-primary" (click)="edit()">Edit</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

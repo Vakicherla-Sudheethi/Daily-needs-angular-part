@@ -30,7 +30,7 @@ addCity()
   .subscribe((response) =>
   {
     console.log(response);
-    // this.router.navigateByUrl('/get-all-user');
+    this.router.navigateByUrl('admin-dashboard/get-all-cities');
   });
   
 }
